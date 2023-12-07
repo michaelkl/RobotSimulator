@@ -25,6 +25,7 @@ Say a robot starts at {7, 3} facing north. Then running this stream of instructi
 
 ## Example run
 ```
-[1] pry(main)> move Position.new(:n, 7, 3), "RAALAL"
+[1] pry(main)> p move(Position.new(:n, 7, 3), "RAALAL")
+#<Position: W@{9, 4}>
 => #<struct Position d=:w, x=9, y=4>
 ```
