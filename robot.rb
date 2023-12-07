@@ -6,6 +6,14 @@ Position = Struct.new(:d, :x, :y) do
   def apply(command)
     command.(self)
   end
+
+  def to_s
+    "#{self.d.to_s.upcase}@{#{self.x}, #{self.y}}"
+  end
+
+  def inspect
+    "#<#{self.class}: #{self}>"
+  end
 end
 
 class BaseCommand
