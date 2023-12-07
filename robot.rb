@@ -99,6 +99,7 @@ end
 # @return [Position]
 def move(pos, commands)
   commands.each_char
+          .lazy
           .map { CommandFactory.(_1) }
           .reduce(pos, &:apply)
 end
